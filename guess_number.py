@@ -21,6 +21,7 @@ def play_game():
         elif user_guess < number_to_guess:
             print("Too low! Guess again,")
         user_guess = int(input("Guess a number between 1 and 100: "))
+    # this comment is to test
     print("You're right! Good job!")
 
 play_game()
