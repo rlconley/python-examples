@@ -60,12 +60,39 @@ for (let block of blocks){
   team_total += 1
 }
 """
-
+# above JS translated into Python
 blocks = ["Sarah", "April", "Anna", "Taylor"]
 team_total = 0
 for block in blocks:
   team_total += 1
 
+# write a function that adds to a total every time someone apologizes for asking a question or not understanding
+# what the function does
+# what input the function needs (if any)
+# what the function returns (if anything)
+
+example_statement = "I'm sorry my bad I'm slow"
+other_example_statement = "I apologize I don't get it I must be slow"
+
+def tally_sorry_jar(statement):
+    """This function takes a statement and returns the number of apologies in the statement for the sorry jar"""
+    sorrys = ["sorry", "apologize", "bad", "stupid", "dumb", "idiot", "slow"]
+    # first take the statement and make it into a list of words
+    #TODO handle punctuation
+    statement_list = statement.split(" ")
+    # use print statements to check that my assumptions are right
+    # print(type(statement_list))
+    jar = 0
+    for word in statement_list:
+      # check if the word matches any of the sorrys
+      if word in sorrys:
+      # if it is, add one to the tally
+        jar += 1
+    return jar
+
+total = tally_sorry_jar(example_statement)
+total += tally_sorry_jar(other_example_statement)
+print(total)
 
 
 
