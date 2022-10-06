@@ -34,10 +34,25 @@ print(type(cooper_household_cats))
 
 # Input and Output
 # input stored as string unless you change it
-dogs = int(input("How many dogs do you have? "))
-print(type(dogs))
+# dogs = int(input("How many dogs do you have? "))
+# print(type(dogs))
 
 # Example
 # check length of password to make sure they are long enough
-password = input("Enter your password: ")
+# password = input("Enter your password: ")
 print(len(password) >= 8)
+
+# Strings and String Formatting
+# f strings let us mix strings and variables
+name = 'Jon'
+# print(f'Hi {name}, would you like to try our new biscuit?')
+
+# While loops
+# response = ''
+# response = input("Knock knock, who's there? ")
+response = 'banana'
+
+while response == 'banana':
+    response = input("Knock knock, who's there? ")
+
+print("Orange you glad I didn't say 'banana'?")
