@@ -52,7 +52,72 @@ name = 'Jon'
 # response = input("Knock knock, who's there? ")
 response = 'banana'
 
-while response == 'banana':
-    response = input("Knock knock, who's there? ")
+# while response == 'banana':
+    # response = input("Knock knock, who's there? ")
 
 print("Orange you glad I didn't say 'banana'?")
+
+
+response = ""
+# print("Knock, Knock")
+# response = input("Who's there?")
+while response == "banana":
+    print("banana, are you insane?")
+    # response = input("Who's there?")
+    # if response == "orange":
+    #     response = input("Orange? Orange who?")
+
+# Conditionals
+# If it's raining, take an umbrella
+# If it's not raining, wear a baseball cap
+raining = None
+# raining = bool(int(input("Did the sensor indicate rain? 1 for yes and 0 for no: ")))
+# if raining:
+#     print("Take an umbrella.")
+# else:
+#     print("Wear a baseball cap.")
+
+# Lists and Tuples
+# array in JS
+my_list = [1, "yellow", True]
+my_tuple = (1, "yellow", True)
+# the differences are the kind of brackets and that tuples are immutable - can't be changed
+my_list.append("Ready Player One 👎🏻")
+my_list[1] = 'green'
+# print(my_list)
+# cannot use append with a tuple
+# also cannot assign new values to tuple elements
+# tuples can be written without parenthesis
+# they can also be used to store multiple values at once
+# you can loop through tuples like you loop through lists
+# you will see tuples being returned from functions
+a, b, c, d = 'orange', 'apple', 'banana', 'pear'
+print(c)
+ # pear
+print(f'{a}s are shipped before {c}s')
+
+# Combine while and if...else
+# play the game "HORSE"
+horse = ["H", "O", "R", "S", "E"]
+player_1_horse = ["_", "_", "_", "_", "_"]
+player_2_horse = ["_", "_", "_", "_", "_"]
+
+
+player_1_made = 0
+player_2_made = 0
+
+player_1_missed = 0
+player_2_missed = 0
+
+while player_1_missed < len(horse):
+    player = int(input("What player are you? 1 or 2: "))
+    shot = input("Did you make your shot? Y or N:  ")
+    if player == 1:
+        if shot == 'Y':
+            print(player_1_horse)
+            player_1_made += 1
+        else:
+            player_1_missed += 1
+            player_1_horse[player_1_missed - 1] = horse[player_1_missed - 1]
+            print(player_1_horse)
+print('You lost!')
